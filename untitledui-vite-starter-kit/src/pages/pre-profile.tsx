@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import {
-    ChevronLeft,
     Menu,
     CreditCard,
     Users,
@@ -46,7 +45,7 @@ const MOCK_PRE_PROFILE: PreProfileData = {
         fullName: "James A Oehring",
         age: 37,
         location: "Cameron, MO",
-        currentAddress: "413 Lovers Ln Cameron MO",
+        currentAddress: "413 Lovers Ln\nCameron, MO",
         primaryPhone: "(816) 225-8592",
     },
     alsoKnownAs: ["James Allen Oehring Jr."],
@@ -127,32 +126,21 @@ export function PreProfile() {
             role="main"
             aria-label="Pre-profile exposure summary"
         >
-            <div className="mx-auto max-w-3xl px-4 pb-8 pt-4 sm:pt-6">
+            <div className="mx-auto max-w-3xl px-4 pb-28 pt-4 sm:pt-6">
                 {/* Header */}
                 <header className="mb-6 flex h-14 items-center justify-between gap-4 sm:mb-8">
-                    <Link
-                        to="/quick-scan"
-                        aria-label="Go back"
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-[var(--text-primary)] dark:text-white outline-none ring-[var(--border-subtle)] transition hover:bg-black/5 focus-visible:ring-2 dark:hover:bg-white/10 dark:ring-[#2A4A68]"
-                    >
-                        <ChevronLeft className="h-6 w-6" />
-                    </Link>
+                    <div className="w-10 shrink-0" aria-hidden />
                     <div className="flex min-w-0 flex-1 justify-center">
-                        <div className="flex flex-col items-center text-center">
-                            <img
-                                src={PrimaryLogo}
-                                alt=""
-                                className="h-7 w-auto dark:hidden sm:h-8"
-                            />
-                            <img
-                                src={PrimaryLogoDark}
-                                alt=""
-                                className="hidden h-7 w-auto dark:block sm:h-8"
-                            />
-                            <span className="mt-0.5 text-xs font-medium text-[var(--text-secondary)] dark:text-[#A8BFD4]">
-                                Personal Data Privacy
-                            </span>
-                        </div>
+                        <img
+                            src={PrimaryLogo}
+                            alt="Vanyshr"
+                            className="h-[2.1875rem] w-auto dark:hidden sm:h-[2.5rem]"
+                        />
+                        <img
+                            src={PrimaryLogoDark}
+                            alt="Vanyshr"
+                            className="hidden h-[2.1875rem] w-auto dark:block sm:h-[2.5rem]"
+                        />
                     </div>
                     <button
                         type="button"
@@ -166,31 +154,22 @@ export function PreProfile() {
                 {/* Primary summary card (hook) */}
                 <div
                     className={cx(
-                        "rounded-xl border p-5 sm:p-6",
-                        "border-[#B91C1C]/40 dark:border-[#B91C1C]/50",
-                        "bg-[#DC2626] dark:bg-[#B91C1C]",
+                        "rounded-xl border-2 p-5 text-center sm:p-6",
+                        "border-[#DC2626] dark:border-[#B91C1C]",
+                        "bg-[var(--bg-surface)] dark:bg-[#0F2D45]",
                     )}
                     role="region"
                     aria-label="Exposure summary"
                 >
-                    <p className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <p className="text-3xl font-bold tracking-tight text-[var(--text-primary)] dark:text-white sm:text-4xl">
                         {data.brokerCount} Brokers
                     </p>
-                    <p className="mt-1 text-sm font-medium text-red-100 dark:text-red-200">
+                    <p className="mt-1 text-sm font-bold text-[var(--text-primary)] dark:text-white">
                         Exposing Your Personal Data
                     </p>
-                    <p className="mt-3 text-sm leading-relaxed text-white">
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--text-primary)] dark:text-white">
                         You are at risk of Spam, Robocallers, Identity Theft, Hacks & other
                         Threats
-                    </p>
-                    <p className="mt-3 text-sm leading-relaxed text-white">
-                        Select{" "}
-                        <span className="font-bold text-[#14ABFE]">
-                            SEE & REMOVE YOUR DATA
-                        </span>{" "}
-                        to view the exact data that&apos;s exposed and how to start removing
-                        it{" "}
-                        <span className="font-bold text-[#14ABFE]">FOR FREE</span>
                     </p>
                 </div>
 
@@ -206,36 +185,36 @@ export function PreProfile() {
                         <p className="text-2xl font-bold tabular-nums text-[var(--text-primary)] dark:text-white sm:text-3xl">
                             {data.totalDataPoints}
                         </p>
-                        <p className="mt-1 text-xs font-medium text-[var(--text-secondary)] dark:text-[#A8BFD4]">
-                            Total Data Points
+                        <p className="mt-1 text-[0.9rem] font-bold leading-tight text-[var(--text-secondary)] dark:text-[#A8BFD4]">
+                            Data<br />Points
                         </p>
                     </div>
                     <div
                         className={cx(
                             "rounded-xl border p-4 text-center",
-                            "border-red-500/40 dark:border-red-500/50",
-                            "bg-[#DC2626] dark:bg-[#B91C1C]",
+                            "border-[#DC2626] dark:border-[#B91C1C]",
+                            "bg-[#DC2626]/20 dark:bg-[#B91C1C]/20",
                         )}
                     >
-                        <p className="text-2xl font-bold tabular-nums text-white sm:text-3xl">
+                        <p className="text-2xl font-bold tabular-nums text-[var(--text-primary)] dark:text-white sm:text-3xl">
                             {data.scamRisks}
                         </p>
-                        <p className="mt-1 text-xs font-medium text-red-100 dark:text-red-200">
-                            Scam Risks
+                        <p className="mt-1 text-[0.9rem] font-bold leading-tight text-[#DC2626] dark:text-red-200">
+                            Scam<br />Risks
                         </p>
                     </div>
                     <div
                         className={cx(
                             "rounded-xl border p-4 text-center",
-                            "border-amber-500/40 dark:border-amber-500/50",
-                            "bg-[#F59E0B] dark:bg-[#D97706]",
+                            "border-[#F59E0B] dark:border-[#D97706]",
+                            "bg-[#F59E0B]/20 dark:bg-[#D97706]/20",
                         )}
                     >
-                        <p className="text-2xl font-bold tabular-nums text-white sm:text-3xl">
+                        <p className="text-2xl font-bold tabular-nums text-[var(--text-primary)] dark:text-white sm:text-3xl">
                             {data.spamRisks}
                         </p>
-                        <p className="mt-1 text-xs font-medium text-amber-100 dark:text-amber-200">
-                            Spam Risks
+                        <p className="mt-1 text-[0.9rem] font-bold leading-tight text-[#B45309] dark:text-amber-200">
+                            Spam<br />Risks
                         </p>
                     </div>
                 </div>
@@ -257,31 +236,27 @@ export function PreProfile() {
                                 {data.contact.fullName}
                             </h2>
                             {data.contact.age != null && (
-                                <span className="text-lg font-semibold tabular-nums text-[var(--text-primary)] dark:text-white">
-                                    {data.contact.age}
+                                <span className="text-lg text-[var(--text-primary)] dark:text-white">
+                                    <span className="font-semibold tabular-nums">{data.contact.age}</span>{" "}
+                                    <span className="font-normal">years old</span>
                                 </span>
                             )}
                         </div>
-                        {data.contact.location && (
-                            <p className="mt-1 text-sm text-[var(--text-secondary)] dark:text-[#A8BFD4]">
-                                {data.contact.location}
-                            </p>
-                        )}
-                        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)] dark:text-[#7A92A8]">
-                                    Current address
-                                </p>
-                                <p className="mt-0.5 text-sm text-[var(--text-primary)] dark:text-white">
-                                    {data.contact.currentAddress || "—"}
-                                </p>
-                            </div>
+                        <div className="mt-4 grid grid-cols-2 gap-4">
                             <div>
                                 <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)] dark:text-[#7A92A8]">
                                     Primary phone
                                 </p>
                                 <p className="mt-0.5 font-mono text-sm tabular-nums text-[var(--text-primary)] dark:text-white">
                                     {data.contact.primaryPhone || "—"}
+                                </p>
+                            </div>
+                            <div>
+                                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)] dark:text-[#7A92A8]">
+                                    Current address
+                                </p>
+                                <p className="mt-0.5 text-sm text-[var(--text-primary)] dark:text-white whitespace-pre-line">
+                                    {data.contact.currentAddress || "—"}
                                 </p>
                             </div>
                         </div>
@@ -429,11 +404,21 @@ export function PreProfile() {
                         )}
                     </DataTypeCard>
                 </div>
+            </div>
 
-                {/* Bottom CTA & disclaimers */}
-                <div className="mt-8 flex flex-col items-center gap-4 text-center sm:mt-10">
-                    <p className="text-xs font-medium uppercase tracking-wide text-[var(--text-muted)] dark:text-[#7A92A8]">
-                        No credit card or sign up required
+            {/* Sticky footer: CTA + disclaimer */}
+            <footer
+                className={cx(
+                    "sticky bottom-0 left-0 right-0 z-10 flex flex-col items-center gap-4 border-t py-4 text-center",
+                    "border-[var(--border-subtle)] dark:border-[#2A4A68]",
+                    "bg-[#F0F4F8] dark:bg-[#022136]",
+                )}
+                role="contentinfo"
+                aria-label="Sign up footer"
+            >
+                <div className="mx-auto w-full max-w-3xl px-4 flex flex-col items-center gap-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#14ABFE] dark:text-[#14ABFE]">
+                        NO CREDIT CARD REQUIRED
                     </p>
                     <Link
                         to="/signup"
@@ -442,22 +427,13 @@ export function PreProfile() {
                             "bg-[#14ABFE] hover:bg-[#0E9AE8]",
                             "focus-visible:ring-2 focus-visible:ring-[#14ABFE] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-[#022136]",
                         )}
-                        aria-label="See and remove your data"
+                        aria-label="Start Vanyshing for free"
                     >
-                        SEE & REMOVE YOUR DATA
+                        Start Vanyshing for FREE
                         <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
                     </Link>
-                    <p className="text-xs text-[var(--text-muted)] dark:text-[#7A92A8]">
-                        Data from QuickScans is deleted after 10 minutes.
-                    </p>
-                    <p className="text-xs text-[var(--text-muted)] dark:text-[#7A92A8]">
-                        <span className="font-semibold">Most importantly: </span>
-                        <span className="font-bold">
-                            WE WILL NEVER SELL OR SHARE YOUR DATA
-                        </span>
-                    </p>
                 </div>
-            </div>
+            </footer>
         </div>
     );
 }
