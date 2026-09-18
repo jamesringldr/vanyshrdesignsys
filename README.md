@@ -1,6 +1,6 @@
 # Vanyshr Design System
 
-> **What this is:** The canonical home of Vanyshr's design bible — tokens, rules, component catalog, and change control. Sole editor: Igor. · **Created:** 2026-09-18 · **Status:** canonical
+> **What this is:** Canonical design bible for the Vanyshr app — the rule-of-law spec all frontend agents follow. · **Created:** 2026-09-18 · **Status:** final
 
 ## What's here
 
