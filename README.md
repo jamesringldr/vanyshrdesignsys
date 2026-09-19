@@ -1,6 +1,9 @@
 # Vanyshr Design System
 
 > **What this is:** Canonical design bible for the Vanyshr app — the rule-of-law spec all frontend agents follow. · **Created:** 2026-09-18 · **Status:** final
+## Brand Guidelines Artifact
+
+https://claude.ai/artifact/PdKU7hm8YiyyUZrW56xYGh
 
 ## What's here
 
