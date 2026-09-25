@@ -164,6 +164,7 @@ This block must match the token file. Edit values via spec from Igor, not by han
 
   /* ── Type ── */
   --size-display: 30px;
+  --size-display-xl: 40px;
   --size-title: 22px;
   --size-heading: 15px;
   --size-body: 14px;
@@ -348,6 +349,7 @@ Families: **system stacks** (default set 2026-09-17 — native-feel PWA, no webf
 | Role | Size token | Size | Weight | Where used |
 |---|---|---|---|---|
 | display | `--size-display` | 30px | 600 | Hero / empty-state title |
+| display-xl | `--size-display-xl` | 40px | 600 | Scan-loading hero |
 | title | `--size-title` | 22px | 600 | Panel titles |
 | heading | `--size-heading` | 15px | 600 | Section heads |
 | body | `--size-body` | 14px | 400 | Running copy |

@@ -21,3 +21,9 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Change: Adopted `GOVERNANCE.md`: Igor is the sole editor; amendments require James's explicit approval; `vanyshr-mono` holds a synced read-only `tokens.css` copy.
 - Rationale: The bible is the spec and the test — it needs change control, not drive-by edits.
 - Tier: ADDITIVE · Approved by: James
+
+## 2026-09-25 — New type token --size-display-xl (40px)
+
+- Change: Added `--size-display-xl: 40px` (`tokens.json`, `tokens.css`) with `--text-display-3xl` bridge alias; documented in `DESIGN.md` §3. ScanLoadingView hero keeps its 40px headline; the `text-[20px]` instance snaps to `--size-title` (22px) with no new token.
+- Rationale: Scan loading view needs a hero size above the 30px display max. Audit check 7 (no arbitrary font sizes) was failing 17/18 on `text-[40px]` / `text-[20px]` in ScanLoadingView.tsx.
+- Tier: MUTATIVE · Approved by: James

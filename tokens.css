@@ -138,6 +138,7 @@
 
   /* ── Type ── */
   --size-display: 30px;
+  --size-display-xl: 40px;
   --size-title: 22px;
   --size-heading: 15px;
   --size-body: 14px;
@@ -161,6 +162,7 @@
   --text-display-md: var(--size-display);
   --text-display-lg: var(--size-display);
   --text-display-2xl: var(--size-display);
+  --text-display-3xl: var(--size-display-xl);
 
   /* ── Bridge: depth aliases ── */
   --radius-xl: var(--radius-lg);
