@@ -15,3 +15,10 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Change: Adopted `GOVERNANCE.md`: Igor is the sole editor; amendments require James's explicit approval; `vanyshr-mono` holds a synced read-only `tokens.css` copy.
 - Rationale: The bible is the spec and the test — it needs change control, not drive-by edits.
 - Tier: ADDITIVE · Approved by: James
+
+## 2026-09-25 — Primary button label → white bold (dark); disabled buttons gain outline
+
+- Change: `--color-primary-on` (dark) `#0b0d10` → `#ffffff`; primary button labels set at font-weight 700 (`DESIGN.md`, `COMPONENTS.md`, `tokens.json`, `tokens.css`). Disabled controls now carry a 1px `--color-border` outline (§9 States) so a disabled button keeps its affordance instead of reading as stray text.
+- Rationale: White-on-cyan is the brand's electric CTA look (James: keep the vibrant `#14abfe` fill). Disabled "scan now" CTA on the scan input form was invisible as a control — screenshot evidence 2026-09-25.
+- Contrast note: white on `#14abfe` ≈ 2.5:1; accepted by James for bold CTA labels (platform precedent: iOS white-on-blue in dark mode). Reverses the 2026-09-17 "never white" lock.
+- Tier: MUTATIVE · Approved by: James

@@ -64,7 +64,7 @@ This block must match the token file. Edit values via spec from Igor, not by han
   --color-primary-hover: #3bb8fe;
   --color-primary-active: #0b8fd9;
   --color-primary-muted: #14abfe33;
-  --color-primary-on: #0b0d10; /* ink on cyan fills — never white */
+  --color-primary-on: #ffffff; /* white 700-weight label on cyan fills (dark) */
   --color-primary-text: #14abfe; /* colored text on dark UI */
   --color-primary-border: #14abfe66; /* badge border on primary-muted */
 
@@ -269,7 +269,7 @@ This block must match the token file. Edit values via spec from Igor, not by han
 | `--color-primary` | #14abfe | #14abfe |
 | `--color-primary-hover` | #3bb8fe | #0b8fd9 |
 | `--color-primary-active` | #0b8fd9 | #0077cc |
-| `--color-primary-on` | #0b0d10 | #0b0d10 |
+| `--color-primary-on` | #ffffff | #0b0d10 |
 | `--color-primary-text` | #14abfe | #0077cc |
 | `--color-primary-border` | #14abfe66 | #14abfe4d |
 | `--color-secondary` | #0b8fd9 | #0077cc |
@@ -316,7 +316,7 @@ Raw brand colors. `--color-primary` and `--color-secondary` are picked from thes
 
 | Seed token | What it controls |
 |---|---|
-| `--color-primary` | Primary fills (buttons, active tabs, selected states). Text/icons on it use `--color-primary-on` (ink — never white). |
+| `--color-primary` | Primary fills (buttons, active tabs, selected states). Text/icons on it use `--color-primary-on` (white 700-weight label in dark; ink in light). |
 | `--color-primary-hover` / `-active` | Press/hover states of primary fills. Never swap hue on interaction. |
 | `--color-primary-muted` | Soft primary backgrounds (selected rows, info banners). |
 | `--color-primary-border` | Border/ring on a `--color-primary-muted` badge — one step stronger than the muted fill. Added 2026-09-17 (bible amendment). |
@@ -432,7 +432,7 @@ Hover, focus, active, disabled, loading, and error are token assignments, not pe
 - Pressed/active: `--color-state-active` wash.
 - Selected: `--color-state-selected` wash + `--color-primary-text` label.
 - Focus: 2px `--color-border-focus` outline + `--color-ring-focus` glow. Visible on every interactive element.
-- Disabled: `--color-text-disabled` on `--color-state-disabled-bg`.
+- Disabled: `--color-text-disabled` on `--color-state-disabled-bg`, plus a 1px `--color-border` outline so the control keeps its button affordance.
 - Semantic: base token for fills and bold text, `-muted` for soft badge/banner backgrounds, `-on` for text/icons on the base fill. Never use a base status fill for a large background.
 - Loading: skeleton blocks in `--color-bg-elevated` with shimmer for content; spinner only for blocking actions.
 
