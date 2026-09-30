@@ -41,4 +41,5 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Rationale: the bible had one catalog row and generic state rules — no variant token mapping, no
   anatomy, no placement rules; agents were inventing button styling per page.
 - Update 2026-09-29 (same branch): radius `--radius-md` → `--radius-pill` — X and Cash App both converged on pill buttons.
+- Update 2026-09-29 (same branch): button labels locked to sentence case (first word + proper nouns only) — Material 3 / modern consumer-app consensus, fits the Cash App approachability direction.
 - Tier: MUTATIVE · Approved by: James

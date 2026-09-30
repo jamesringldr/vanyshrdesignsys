@@ -532,6 +532,7 @@ with the container background.
 - Destructive confirmations: destructive full-width on top, ghost "Cancel" below. Destructive is never
   the only action on screen.
 - Labels are verbs naming the action ("Start scan", "Save changes").
+- Sentence case — first word and proper nouns only ("Get started", "Add money"), never title case.
 
 ## 12 Component library stack
 
