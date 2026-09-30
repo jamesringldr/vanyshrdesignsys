@@ -509,7 +509,7 @@ with the container background.
 - Icon-only: square at the size height (48×48 / 44×44), 20px Lucide icon, ghost treatment unless specified.
 - Label: `--size-body` (14px), `--font-ui`. Primary 700; all other variants 600.
 - Icon + label: 16px icon, 8px gap (`--space-2`).
-- Radius: `--radius-md` (12px), all variants, all sizes.
+- Radius: `--radius-pill` (999px), all variants, all sizes.
 - Loading: 16px spinner in the label color, 8px gap before the label; label stays visible; width locked
   with min-width so the button doesn't shift; interaction blocked (`aria-disabled`). Variant colors are
   retained — loading is not the disabled treatment.
