@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+  <mask id="vi-ss-target-k" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+    <rect width="64" height="64" fill="#fff"/>
+    <circle fill="none" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" cx="30" cy="34" r="14"/>
+    <line fill="none" stroke="#000" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" x1="33" y1="31" x2="56" y2="8"/>
+    <path fill="none" stroke="#000" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" d="M50 7 V14 H57"/>
+  </mask>
+  <g mask="url(#vi-ss-target-k)">
+    <circle cx="30" cy="34" r="24"/>
+  </g>
+  <line fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" x1="31" y1="33" x2="56" y2="8"/>
+  <path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M50 7 V14 H57"/>
+</svg>

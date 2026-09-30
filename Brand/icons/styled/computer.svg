@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <filter id="vi-id-computer-wobble" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <g filter="url(#vi-id-computer-wobble)">
+    <path style="fill:var(--icon-shadow, #14ABFE);stroke:var(--icon-shadow, #14ABFE);stroke-width:1.5;stroke-linejoin:round" d="M10 49 L44 59 L61 47 L61 50 L44 62 L10 52 Z"/>
+    <path style="fill:var(--icon-shadow, #14ABFE);stroke:var(--icon-shadow, #14ABFE);stroke-width:1.5;stroke-linejoin:round" d="M6 44 L40 54 L58 42 L58 45.5 L40 57.5 L6 47.5 Z"/>
+    <path style="fill:var(--icon-paper, #FFFFFF);stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M6 44 L40 54 L58 42 L26 35 Z"/>
+    <path style="fill:none;stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M14 43 L35 49"/>
+    <path style="fill:none;stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M20 40.5 L41 46.5"/>
+    <path style="fill:var(--icon-paper, #FFFFFF);stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M26 35 L58 42 L59 12 L27 5 Z"/>
+    <path style="fill:var(--icon-ink, #070F1C);stroke:var(--icon-ink, #070F1C);stroke-width:1.5;stroke-linejoin:round" d="M30 32 L54.5 37.5 L55.5 15 L31 9.5 Z"/>
+    <path style="fill:none;stroke:var(--icon-paper, #FFFFFF);stroke-width:2.4;stroke-linecap:round" d="M35 17 L48 20"/>
+    <path style="fill:none;stroke:var(--icon-paper, #FFFFFF);stroke-width:2.4;stroke-linecap:round" d="M35 22.5 L44 24.5"/>
+    <path style="fill:none;stroke:var(--icon-paper, #FFFFFF);stroke-width:2.4;stroke-linecap:round" d="M35 28 L40 29"/>
+    <path style="fill:none;stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M12 11 L12 18"/>
+    <path style="fill:none;stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M8.5 14.5 L15.5 14.5"/>
+    <path style="fill:none;stroke:var(--icon-ink, #070F1C);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round" d="M17 6 L19 8"/>
+  </g>
+</svg>
