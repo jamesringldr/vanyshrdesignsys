@@ -22,3 +22,16 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Rationale: White-on-cyan is the brand's electric CTA look (James: keep the vibrant `#14abfe` fill). Disabled "scan now" CTA on the scan input form was invisible as a control — screenshot evidence 2026-09-25.
 - Contrast note: white on `#14abfe` ≈ 2.5:1; accepted by James for bold CTA labels (platform precedent: iOS white-on-blue in dark mode). Reverses the 2026-09-17 "never white" lock.
 - Tier: MUTATIVE · Approved by: James
+
+## 2026-09-29 — Button spec (§11.1)
+
+- Change: New DESIGN.md §11.1 Buttons — full spec for content-surface (shadcn) buttons. Five variants
+  (primary, secondary, outline, ghost, destructive) with per-variant fill/label/border/hover/pressed token
+  mapping; anatomy (48/44px sizes, 14px labels, 12px radius, icon rules, loading treatment); states (focus,
+  disabled, no selected state); behavior (one primary per screen, full-width sheet CTAs, destructive
+  confirmation pattern, verb labels). COMPONENTS.md Button row updated. Resolves the parked 2026-09-17
+  bottom-drawer CTA question (distinctiveness from scale + placement, fill stays cyan). Outline variant
+  covers fill-collision cases where the secondary fill matches the container.
+- Rationale: the bible had one catalog row and generic state rules — no variant token mapping, no
+  anatomy, no placement rules; agents were inventing button styling per page.
+- Tier: MUTATIVE · Approved by: James
