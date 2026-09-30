@@ -10,6 +10,12 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Rationale: The bible needed a single home with sole-editor change control, separate from the app repo where agents work.
 - Tier: ADDITIVE · Approved by: James
 
+## 2026-09-25 — ScanLoader tokens: `--shadow-scan-card`, `--gradient-text-shimmer`
+
+- Change: Added `--shadow-scan-card` (loader-card elevation: 0.45-black drop shadow + 0.06-white inset top highlight, with a lighter `.light` override) and `--gradient-text-shimmer` (the bible's first gradient token, built entirely from `--color-text-primary` so it theme-flips with no `.light` override) to `tokens.css`, `tokens.json`, and `DESIGN.md`; new `Effects` token section.
+- Rationale: The scan-wait ScanLoader needed elevation depth and an animated active-phase shimmer; both were proposed-but-unapproved in vanyshr-mono and blocking the token sync.
+- Tier: ADDITIVE · Approved by: James
+
 ## 2026-09-18 — Sole-editor governance established
 
 - Change: Adopted `GOVERNANCE.md`: Igor is the sole editor; amendments require James's explicit approval; `vanyshr-mono` holds a synced read-only `tokens.css` copy.
