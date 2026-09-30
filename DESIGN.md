@@ -525,7 +525,7 @@ with the container background.
 
 - One primary per screen. Secondary, outline, and ghost support it; never two primaries together.
 - Full-width: primary CTAs inside sheets and bottom drawers are full-width. Inline everywhere else.
-- Stacks: vertical, 12px gap (`--space-3`), primary on top. No side-by-side button pairs on mobile.
+- Stacks: vertical, 12px gap (`--space-3`), primary on top. No side-by-side button pairs on mobile — except inside modals/dialogs, where a binary decision with short labels may use side-by-side: safe/default action trailing (right), riskier action leading (left). Destructive confirmations keep the stacked on-top placement in all contexts.
 - Sheet / bottom-drawer CTA block: full-width primary with full-width secondary or ghost beneath it,
   12px gap, 16px horizontal inset, safe-area bottom padding. Distinctiveness comes from scale and
   placement; the fill stays electric cyan.
