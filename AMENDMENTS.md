@@ -43,3 +43,9 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Update 2026-09-29 (same branch): radius `--radius-md` → `--radius-pill` — X and Cash App both converged on pill buttons.
 - Update 2026-09-29 (same branch): button labels locked to sentence case (first word + proper nouns only) — Material 3 / modern consumer-app consensus, fits the Cash App approachability direction.
 - Tier: MUTATIVE · Approved by: James
+
+## 2026-10-12 — Dark theme retone: navy → `#07090e`, bg-app → `#22242b`, bg-surface → `#2b2d34`
+
+- Change: `:root` (dark) `--color-brand-navy` `#070f1c` → `#07090e`; `--color-bg-app` `#242424` → `#22242b`; `--color-bg-surface` `#343434` → `#2b2d34`. Mirrored in `tokens.json`. Light theme untouched. Supersedes the unmerged 2026-10-10 navy proposal (`#0b1b2b`, branch `amend/brand-navy-0b1b2b`, deleted).
+- Rationale: James specified the new dark-theme values; reverses the 2026-09-17 "no blue-tinted backgrounds" decision — dark surfaces now carry a blue tint continuous with the navy.
+- Tier: MUTATIVE · Approved by: James
