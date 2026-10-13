@@ -55,3 +55,9 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Change: `DESIGN.md` brought in line with the 2026-10-12 retone — the `:root` css fence (`--color-brand-navy` `#07090e`, `--color-bg-app` `#22242b`, `--color-bg-surface` `#2b2d34`) and the matching rows in the color table. No token values change; `tokens.css` / `tokens.json` already carry them.
 - Rationale: governance rule 4 (mirrors move together) — the retone amendment updated `tokens.css` and `tokens.json` but not `DESIGN.md`, so `mirror-check` failed against the canonical files. Known leftover: the historical header comment (Navy `#070F1C`, "no blue-tinted backgrounds") is unchanged in both `tokens.css` and the `DESIGN.md` fence.
 - Tier: MUTATIVE · Approved by: James
+
+## 2026-10-12 — Dark ramp retone: elevated, border, disabled
+
+- Change: `:root` (dark) `--color-bg-elevated` `#444444` → `#383a42`; `--color-border` `#545454` → `#4a4d56`; `--color-state-disabled-bg` `#343434` → `#2b2d34`; `--color-text-disabled` and `--color-state-disabled-fg` `#5c5c5c` → `#5a5f6b`. Mirrored in `tokens.json` and `DESIGN.md` (css fence + color table). Light theme untouched.
+- Rationale: follows the 2026-10-12 retone of navy / bg-app / bg-surface. Inputs (`bg-elevated`), borders and disabled controls kept the old neutral grey and looked off against the blue-tinted surfaces. Known leftovers: `--color-border-subtle` / `-strong`, `--color-state-hover` / `-active` unchanged. `--color-state-disabled-bg` now equals `--color-bg-surface`, so a disabled control on a surface relies on its `--color-border` outline.
+- Tier: MUTATIVE · Approved by: James
