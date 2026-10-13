@@ -49,3 +49,9 @@ Every amendment lands here in the same commit, as: date, change, rationale (one 
 - Change: `:root` (dark) `--color-brand-navy` `#070f1c` → `#07090e`; `--color-bg-app` `#242424` → `#22242b`; `--color-bg-surface` `#343434` → `#2b2d34`. Mirrored in `tokens.json`. Light theme untouched. Supersedes the unmerged 2026-10-10 navy proposal (`#0b1b2b`, branch `amend/brand-navy-0b1b2b`, deleted).
 - Rationale: James specified the new dark-theme values; reverses the 2026-09-17 "no blue-tinted backgrounds" decision — dark surfaces now carry a blue tint continuous with the navy.
 - Tier: MUTATIVE · Approved by: James
+
+## 2026-10-12 — DESIGN.md mirror of the dark theme retone
+
+- Change: `DESIGN.md` brought in line with the 2026-10-12 retone — the `:root` css fence (`--color-brand-navy` `#07090e`, `--color-bg-app` `#22242b`, `--color-bg-surface` `#2b2d34`) and the matching rows in the color table. No token values change; `tokens.css` / `tokens.json` already carry them.
+- Rationale: governance rule 4 (mirrors move together) — the retone amendment updated `tokens.css` and `tokens.json` but not `DESIGN.md`, so `mirror-check` failed against the canonical files. Known leftover: the historical header comment (Navy `#070F1C`, "no blue-tinted backgrounds") is unchanged in both `tokens.css` and the `DESIGN.md` fence.
+- Tier: MUTATIVE · Approved by: James
