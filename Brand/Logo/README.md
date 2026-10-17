@@ -42,7 +42,7 @@ Measured from the master artwork (`PrimaryLogo-DarkMode.png`, 900×300). Let **H
 
 ## Wordmark rules
 
-- The canonical wordmark is **Neo Sans Italic**. (Note: the wordmark letterforms inside the current `PrimaryLogo*` files are *not* italic — those files predate this correction and will be re-cut once the italic vector lands. Until then, use the pre-built lockups as-is; don't rebuild them from parts.)
+- The canonical wordmark is **Neo Sans Italic**. (Note: the wordmark letterforms inside the current `PrimaryLogo*` files are *not* italic — those files predate the correction. `Brand/Logo/wordmark.svg` (italic, landed 2026-10-17) unblocks the re-cut; until the lockups are re-cut, use the pre-built files as-is — don't rebuild them from parts.)
 - Never re-typeset "vanyshr" from a Neo Sans font file and call it the logo. Always use the artwork.
 - Never stretch, condense, re-space, rotate, outline, or add effects (shadows, gradients) to the lockup.
 
@@ -53,16 +53,10 @@ Measured from the master artwork (`PrimaryLogo-DarkMode.png`, 900×300). Let **H
 | `Brand/LogoFiles/PrimaryLogo.svg` / `.png` | Full lockup, light | Current (wordmark not yet italic) |
 | `Brand/LogoFiles/PrimaryLogo-DarkMode.svg` / `.png` | Full lockup, dark | Current (wordmark not yet italic) |
 | `Brand/LogoFiles/PrimaryIcon*.svg` / `.png` | Icon variants | Current |
-| `Brand/Logo/wordmark.svg` | Standalone italic wordmark | **Pending vectorization** |
+| `Brand/Logo/wordmark.svg` | Standalone italic wordmark | Landed 2026-10-17 — pure vector, tight viewBox, `currentColor`, italic render-verified |
 
-## Wordmark SVG acceptance criteria
+## Wordmark SVG — as built
 
-For whoever vectorizes the italic wordmark (from James's PNG upload). The file must:
-
-1. Be **pure vector paths** — no embedded PNG/raster.
-2. Preserve the **italic angle** exactly as drawn.
-3. Use a **tight viewBox** cropped to the ink bounding box (the H/8 gap recipe measures ink-to-ink; viewBox padding breaks it).
-4. Use **`currentColor`** for all fills — no baked-in white/navy.
-5. Land at `Brand/Logo/wordmark.svg`.
+`Brand/Logo/wordmark.svg` landed 2026-10-17 and met the acceptance criteria on intake (two normalizations applied: viewBox tightened to the ink bounding box `22 23 869 241`, and the fill changed from `var(--wordmark-ink,#0F172A)` to `currentColor` per this spec). Pure vector paths, no embedded raster, italic angle preserved and render-verified.
 
 Once it lands, re-cut the `PrimaryLogo*` lockup files with the italic wordmark and the ratios above, then this note goes away.
